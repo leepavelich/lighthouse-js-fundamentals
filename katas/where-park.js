@@ -2,6 +2,7 @@ const whereCanIPark = function (spots, vehicle) {
   for (let row = 0; row < spots.length; row++) {
     for (let col = 0; col < spots[row].length; col++) {
       let spot = spots[row][col]
+      
       if (vehicle === 'regular') {
         if (spot === 'R') return [col, row]
       }

@@ -7,9 +7,7 @@ const checkAir = function (samples, threshold) {
     samples[i] === 'clean' ? cleanSum++ : dirtySum++
   }
 
-  let dirtyFrac = dirtySum / total
-  
-  return (dirtyFrac > threshold) ? 'Polluted' : 'Clean'
+  return dirtySum / total > threshold ? 'Polluted' : 'Clean'
 };
 
 console.log(checkAir(
