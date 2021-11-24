@@ -9,10 +9,8 @@ const blocksAway = function(directions) {
       case 'south': pos.north -= directions[i+1]; break
       case 'east' : pos.east  += directions[i+1]; break
     }
-
     heading = newHeading(heading, directions[i+2])
   }
-
   return pos
 };
 
