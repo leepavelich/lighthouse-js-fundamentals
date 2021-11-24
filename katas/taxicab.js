@@ -18,10 +18,10 @@ const blocksAway = function(directions) {
 
 const newHeading = (prevHeading, direction) => {
   switch(prevHeading) {
-    case 'north': return (direction === 'left') ? 'west'  : 'east'
-    case 'west':  return (direction === 'left') ? 'south' : 'north'
-    case 'south': return (direction === 'left') ? 'east'  : 'west'
-    case 'east':  return (direction === 'left') ? 'north' : 'south'
+    case 'north': return direction === 'left' ? 'west'  : 'east'
+    case 'west':  return direction === 'left' ? 'south' : 'north'
+    case 'south': return direction === 'left' ? 'east'  : 'west'
+    case 'east':  return direction === 'left' ? 'north' : 'south'
   }
 }
 
