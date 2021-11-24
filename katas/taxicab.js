@@ -1,6 +1,6 @@
 const blocksAway = function(directions) {
   const pos = {east: 0, north: 0}
-  let heading = (directions[0] === 'left' ? 'north' : 'east')
+  let heading = directions[0] === 'left' ? 'north' : 'east'
 
   for (let i = 0; i < directions.length; i += 2) {
     switch(heading) {
@@ -12,7 +12,7 @@ const blocksAway = function(directions) {
     heading = newHeading(heading, directions[i+2])
   }
   return pos
-};
+}
 
 const newHeading = (prevHeading, direction) => {
   switch(prevHeading) {
